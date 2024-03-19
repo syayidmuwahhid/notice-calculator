@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Notice Calculator</string>
+
+    <string-array name="lokasi">
+        <item>Kabupaten Sukabumi</item>
+        <item>Kota Sukabumi</item>
+    </string-array>
+    <string-array name="spinner_items">
+        <item>Pilih Type</item>
+        <item>A5C02R52S1</item>
+        <item>AFX12U21C08</item>
+        <item>B5D02K29M2</item>
+        <item>C1M02N41L1</item>
+        <item>C1M02N42L1</item>
+        <item>F1C02N46L0</item>
+        <item>G2E02R21L0</item>
+        <item>H1B02N41L0</item>
+        <item>H1B02N42L0</item>
+        <item>L1F02N36L1</item>
+        <item>L1F02N37L1</item>
+        <item>L1K02Q33L1</item>
+        <item>N1N02Q43L1</item>
+        <item>NF11T11C01</item>
+        <item>P5E02R48M1</item>
+        <item>P5E02R49M1</item>
+        <item>R5F04R25</item>
+        <item>T5C02R37L0</item>
+        <item>T4G02T31L0</item>
+        <item>V1J02Q32L1</item>
+        <item>V1J02Q50L1</item>
+        <item>X1H02N32M1</item>
+        <item>Y3B02R17L0</item>
+    </string-array>
+</resources>

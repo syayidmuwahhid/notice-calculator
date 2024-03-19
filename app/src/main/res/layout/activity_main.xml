@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/container">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Notice Calculator 2023"
+                android:layout_marginTop="0px"
+                android:textSize="13pt"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:padding="20px"
+                android:background="#cbf051"
+                />
+
+            <Spinner
+                android:id="@+id/lokasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40px"
+                android:layout_marginTop="16dp"
+                android:background="#f08b51"
+                android:padding="15px"
+                android:layout_gravity="center_horizontal"
+                android:entries="@array/lokasi"/>
+
+
+            <LinearLayout
+                android:id="@+id/spinnerLayoutmaster"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10px"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/addSpinnerButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30px"
+                android:layout_marginLeft="10px"
+                android:layout_marginRight="10px"
+                android:text="Tambah Notice"
+                android:textColor="@color/black"
+                android:backgroundTint="#7DF9FF"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/resetButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="10px"
+                    android:text="Reset"
+                    android:textColor="@color/black"
+                    android:backgroundTint="#DFFF00"/>
+
+                <Button
+                    android:id="@+id/submitButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="10px"
+                    android:backgroundTint="#0BDA51"
+                    android:text="Hitung"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
