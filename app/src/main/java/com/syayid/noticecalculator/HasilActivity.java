@@ -78,7 +78,7 @@ public class HasilActivity extends AppCompatActivity {
             total.setLayoutParams(layoutParams02);
             total.setGravity(Gravity.END);
 
-            int harga = notice.getTurun(notices.get(i));
+            int harga = notice.getNotice(notices.get(i));
             int totalHarga = harga * Integer.valueOf(jmlNotices.get(i));
             totalSeluruh += totalHarga;
             jmlSeluruh += Integer.valueOf(jmlNotices.get(i));

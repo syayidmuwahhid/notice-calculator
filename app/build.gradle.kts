@@ -10,8 +10,8 @@ android {
         applicationId = "com.syayid.noticecalculator"
         minSdk = 23
         targetSdk = 33
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 120240319
+        versionName = "1.2024.03.19"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
