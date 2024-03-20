@@ -19,7 +19,9 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -209,11 +211,33 @@ public class MainActivity extends AppCompatActivity {
             jmlNotices.add(number);
         }
 
-        Intent intent = new Intent(this, HasilActivity.class);
-        intent.putStringArrayListExtra("notices", notices);
-        intent.putStringArrayListExtra("jmlNotices", jmlNotices);
-        intent.putExtra("lokasi", lokasi.getSelectedItem().toString());
-        startActivity(intent);
+        //validasi duplikasi spinner
+        Set<String> selectedNotice = new HashSet<>();
+        boolean hasDuplicate = false;
+
+        // Memeriksa kursi yang dipilih dalam setiap spinner
+        for (Spinner spinner : spinnerList) {
+            String selectedSeat = spinner.getSelectedItem().toString();
+
+            // Memeriksa apakah kursi telah dipilih sebelumnya
+            if (!selectedNotice.add(selectedSeat)) {
+                hasDuplicate = true;
+                break; // Ada duplikat, keluar dari loop
+            }
+        }
+
+        if (hasDuplicate) {
+            // Menampilkan pesan bahwa ada kursi yang duplikat
+            Toast.makeText(MainActivity.this, "Ada Notice yang duplikat, harap pilih kursi yang berbeda.", Toast.LENGTH_LONG).show();
+        } else {
+            // Lanjutkan dengan proses checkout karena tidak ada kursi yang duplikat
+            Intent intent = new Intent(this, HasilActivity.class);
+            intent.putStringArrayListExtra("notices", notices);
+            intent.putStringArrayListExtra("jmlNotices", jmlNotices);
+            intent.putExtra("lokasi", lokasi.getSelectedItem().toString());
+            startActivity(intent);
+        }
+
 
     }
 }

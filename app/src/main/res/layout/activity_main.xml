@@ -22,7 +22,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Notice Calculator 2023"
+                android:text="Notice Calculator 2024"
                 android:layout_marginTop="0px"
                 android:textSize="13pt"
                 android:textAlignment="center"
